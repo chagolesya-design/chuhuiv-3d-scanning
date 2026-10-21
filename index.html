@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="3D Scanning of Chuhuiv's Architectural Heritage. Digital documentation for preservation and reconstruction.">
+    <title>3D Scanning of Chuhuiv's Architectural Heritage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+        <nav class="section-menu" aria-label="Main navigation">
+          <ol>
+            <li><a href="#project" aria-current="page"><span class="section-number">01</span> PROJECT</a></li>
+            <li><a href="#background"><span class="section-number">02</span> BACKGROUND</a></li>
+            <li><a href="#concept"><span class="section-number">03</span> CONCEPT</a></li>
+            <li><a href="#research" aria-disabled="true" tabindex="-1"><span class="section-number">04</span> RESEARCH</a></li>
+            <li><a href="#results" aria-disabled="true" tabindex="-1"><span class="section-number">05</span> RESULTS</a></li>
+            <li><a href="#team" aria-disabled="true" tabindex="-1"><span class="section-number">06</span> TEAM</a></li>
+          </ol>
+        </nav>
+
+    <main>
+      <section class="project-slide" id="project" aria-labelledby="project-title">
+        <header class="location"><span>CHUHUIV</span><span>UKRAINE</span><span>49.8347° N</span><span>36.6855° E</span></header>
+
+        <div class="scan-layer hero-scan" id="scan-layer">
+          <img class="scan-image" src="assets/hero-scan.png"
+               alt="Point-cloud scan of a historic building in Chuhuiv, with surrounding trees and ground.">
+        </div>
+
+        <div class="project-copy">
+          <h1 id="project-title">
+            <span>3D SCANNING</span>
+            <span>OF CHUHUIV'S</span>
+            <span>ARCHITECTURAL</span>
+            <span>HERITAGE</span>
+          </h1>
+          <p class="project-description">DIGITAL DOCUMENTATION FOR<br>PRESERVATION AND RECONSTRUCTION</p>
+          <p class="project-date">2025 — 2026 / CHUHUIV, UKRAINE</p>
+        </div>
+
+        <footer class="slide-footer">
+          <!-- Reserved space for three partner logos; no invented branding. -->
+          <div class="partner-logos">
+            <div class="partner-logo" data-partner="1"></div>
+            <div class="partner-logo" data-partner="2"></div>
+            <div class="partner-logo" data-partner="3"></div>
+          </div>
+          <!-- Visual cue only until additional slides exist. -->
+          <div class="scroll-cue"><span>SCROLL</span><span class="scroll-arrow" aria-hidden="true"></span></div>
+        </footer>
+      </section>
+
+      <section class="background-slide" id="background" aria-labelledby="background-title">
+        <!-- Reserved for the supplied Chuhuiv map; no substitute geography. -->
+        <div class="background-map" aria-hidden="true"></div>
+        <header class="background-identity">
+          <span class="background-number">02</span>
+          <h2 id="background-title">BACKGROUND</h2>
+          <p>CONTEXT, CHALLENGES<br>AND RESEARCH QUESTIONS</p>
+        </header>
+        <div class="background-panel">
+          <div class="background-overview" id="background-overview">
+            <ol class="background-questions">
+              <li><button type="button" data-topic="0" aria-controls="background-reader"><span class="topic-number">01</span><span>WHY DOES CHUHUIV NEED A NEW PRESERVATION STRATEGY?</span></button></li>
+              <li><button type="button" data-topic="1" aria-controls="background-reader"><span class="topic-number">02</span><span>CAN RE-CREATION BECOME A FORM OF PRESERVATION?</span></button></li>
+              <li><button type="button" data-topic="2" aria-controls="background-reader"><span class="topic-number">03</span><span>HOW CAN DIGITAL DOCUMENTATION PRESERVE THE FUTURE?</span></button></li>
+              <li><button type="button" data-topic="3" aria-controls="background-reader"><span class="topic-number">04</span><span>INTERNATIONAL HERITAGE CONSERVATION FRAMEWORKS</span></button></li>
+              <li><button type="button" data-topic="4" aria-controls="background-reader"><span class="topic-number">05</span><span>THE UKRAINIAN CONTEXT OF RE-CREATION</span></button></li>
+              <li><button type="button" data-topic="5" aria-controls="background-reader"><span class="topic-number">06</span><span>DIGITAL DOCUMENTATION AND THE RESEARCH GAP</span></button></li>
+            </ol>
+          </div>
+          <article class="background-reader" id="background-reader" aria-labelledby="reading-title" hidden>
+            <header class="reading-heading">
+              <span class="topic-number" id="reading-number"></span>
+              <h3 id="reading-title" tabindex="-1"></h3>
+            </header>
+            <div class="reading-body">
+              <div class="reading-text" id="reading-text" tabindex="0" role="region" aria-labelledby="reading-title"></div>
+              <div class="reading-scroll" aria-hidden="true" hidden><span></span></div>
+            </div>
+            <footer class="reading-controls">
+              <button type="button" id="all-questions">← ALL QUESTIONS</button>
+              <button type="button" id="next-topic">NEXT 02 →</button>
+            </footer>
+          </article>
+        </div>
+        <nav class="progress-nav background-topic-nav" aria-label="Background topics">
+          <ol>
+            <li><button type="button" data-topic="0" aria-label="01 WHY DOES CHUHUIV NEED A NEW PRESERVATION STRATEGY?" aria-controls="background-reader"></button></li>
+            <li><button type="button" data-topic="1" aria-label="02 CAN RE-CREATION BECOME A FORM OF PRESERVATION?" aria-controls="background-reader"></button></li>
+            <li><button type="button" data-topic="2" aria-label="03 HOW CAN DIGITAL DOCUMENTATION PRESERVE THE FUTURE?" aria-controls="background-reader"></button></li>
+            <li><button type="button" data-topic="3" aria-label="04 INTERNATIONAL HERITAGE CONSERVATION FRAMEWORKS" aria-controls="background-reader"></button></li>
+            <li><button type="button" data-topic="4" aria-label="05 THE UKRAINIAN CONTEXT OF RE-CREATION" aria-controls="background-reader"></button></li>
+            <li><button type="button" data-topic="5" aria-label="06 DIGITAL DOCUMENTATION AND THE RESEARCH GAP" aria-controls="background-reader"></button></li>
+          </ol>
+        </nav>
+        <!-- Insert the original source paragraphs into these templates when supplied. -->
+        <template id="background-content-0" data-title="Why does Chuhuiv need a new preservation strategy?">
+          <p>Cultural heritage in Ukraine is facing an unprecedented threat. The war has only intensified processes that had been unfolding for decades: systematic neglect of historic environments, uncontrolled development, and destruction driven by short-term gain. For years, we ourselves have been erasing what previous generations had created, and now, compounded by the consequences of war, this process has taken on an irreversible character.</p>
+          <p>The issue is especially acute in Ukraine’s small historic towns, which are losing their populations, economic purpose, and cultural continuity. In the eastern regions of the country, the situation borders on hopelessness: war, depopulation, and the proximity to the border have all but eliminated the possibility of development.</p>
+          <p>The city of Chuhuiv in the Kharkiv region is unique for its planning structure, originally developed as a military settlement in the era of classicism. Today, it has become a dead end: the population is leaving, the urban fabric is deteriorating due to chaotic construction, and architectural monuments are degrading. Heritage re-creation is currently almost impossible — there are no available resources, no institutional attention, and the proximity to the border prevents any long-term planning.</p>
+          <p>Yet, the experience of other countries shows that a time for rebuilding always comes — and even severely damaged heritage can be restored. The key question is: what will we pass on to the next generations for this future work?</p>
+        </template>
+        <template id="background-content-1" data-title="Can re-creation become a form of preservation?">
+          <p>In heritage conservation theory, “re-creation” has always been the most controversial concept. For some, it is a falsification of history — a “replica” that undermines authenticity. For others, it is a necessary act of cultural memory that enables the return of what was lost.</p>
+          <p>In the European conservation tradition, there is no separate term for “re-creation” — the broader and more neutral “reconstruction” is used instead. In the Ukrainian discourse, however, “vidtvorennia” (re-creation) has emerged as a distinct category, reflecting a specific regional experience of rebuilding in the wake of massive loss.</p>
+          <p>The philosophy of the project is centered on developing a new model: how delayed re-creation can become a form of preservation, even in the absence of the physical substance of a heritage site.</p>
+          <p>There are many places like this across Ukraine—small historic towns facing the threat of disappearance. Using Chuhuiv as a case study, we aim to lay the groundwork for the future by initiating the creation of a digital archive of architectural heritage and developing a theoretical model of delayed re-creation as a new strategy for safeguarding cultural memory. Art Oborona</p>
+        </template>
+        <template id="background-content-2" data-title="How can digital documentation preserve the future?">
+          <p>Unlike most contemporary digital documentation projects, which also claim to be future-oriented, 3D scanning in those cases is typically treated either as a technical preparatory step for immediate restoration or as the creation of a visual “image for a textbook,” without a clear strategy for future application.</p>
+          <p>Our approach is based on a different temporal logic: we see digital scanning as a tool for delayed re-creation—one that may gain relevance even generations from now.</p>
+          <p>We understand clearly: landmark monuments will be preserved, as they hold political and symbolic significance. But small-scale buildings, local ensembles, and entire fragments of urban fabric are doomed—they will be demolished or overbuilt, while communities, under the pressure of limited resources, will resign themselves to the loss. When future generations seek to restore what was destroyed, they may no longer have access to the material substance—but they will have a digital foundation.</p>
+          <p>Despite all international charters, guidelines, and recommendations that emphasize material authenticity, no global institution can deny communities the right to re-create their architectural heritage even in the absence of original substance.</p>
+          <p>Our project demonstrates that even under seemingly hopeless conditions, it is possible to act proactively: to document the present in order to open a path into the future. Art Oborona</p>
+        </template>
+        <template id="background-content-3" data-title="International Heritage Conservation Frameworks">
+          <p>The issues of preservation and restoration of cultural heritage have always been at the center of both international and national discussions.</p>
+          <p>Throughout the 20th and 21st centuries, doctrinal documents — including the Venice Charter (1964), the Nara Document on Authenticity (1994), the Riga Charter (2000), the Burra Charter (updated in 2013), and the UNESCO Recommendation on the Historic Urban Landscape (HUL, 2011) — have established key principles: the primacy of authenticity, justification of interventions, methodological transparency, and a balance between material substance and the values of place.</p>
+          <p>A major paradigm shift was the recognition that heritage is not only material but a multidimensional phenomenon: form, function, context, spirit of place, and social practices all hold equal significance (Nara Document, 1994).</p>
+          <p>Various models have been developed for post-war and post-catastrophe scenarios. However, a persistent question arises: is reconstruction a falsification — a newly built replica that undermines authenticity — or a legitimate cultural act of remembrance? This tension between &quot;falsification&quot; and &quot;legitimate re-creation&quot; remains unresolved and lies at the core of ongoing theoretical debates (see Post-trauma Recovery of Cultural Heritage, ICOMOS, 2017–2019, Vol. I–III). Art Oborona</p>
+        </template>
+        <template id="background-content-4" data-title="The Ukrainian Context of Re-creation">
+          <p>Ukraine’s experience follows a distinct trajectory. The large-scale loss of heritage in the 20th century — including the destruction of monasteries and cathedrals, wars, and Soviet reconstruction policies — shaped a unique field of “bringing back the lost.”</p>
+          <p>The term vidtvorennia (re-creation) became established in professional discourse, yet it remains methodologically ambiguous: there are no clear criteria for the required source base, the acceptable extent of new material, or principles for marking the “new” versus the “old.”</p>
+          <p>This continues to fuel debate, with re-creation often branded as falsification, despite its evident role in preserving identity and collective memory (see Concept of National Policy on Cultural Heritage in Ukraine, ed. O.P. Oliinyk, 2014). Art Oborona</p>
+        </template>
+        <template id="background-content-5" data-title="Digital Documentation and the Research Gap">
+          <p>Against this backdrop, digital technologies—such as 3D scanning, photogrammetry, and HBIM—have become a global standard in the field of documentation. International frameworks, including the London Charter (2009) for computer-based heritage visualisation and the Seville Principles (2017) for virtual archaeology, have established guidelines that ensure reproducibility of results, transparency of interpretation, and validation of models.</p>
+          <p>Digital data allow for the measurement of deformations, recording of stratigraphy, and simulation of intervention scenarios.</p>
+          <p>At the same time, these practices in Ukraine face significant limitations. First, they remain focused primarily on isolated “landmark” monuments, while the architectural fabric and local ensembles of most small historic towns are largely overlooked. Second, digital documentation is predominantly reactive—capturing remnants only after destruction has occurred. Third, there is a disconnect between technical data and cultural logic.</p>
+          <p>In current practice, 3D scanning is mostly used as a tool for immediate restoration—a model is created for a specific project planned for implementation “now.” If, for various reasons, reconstruction does not proceed, the digital data remain merely as a “preserved memory,” rather than being seen as a strategic foundation for re-creation in the future.</p>
+          <p>Thus, the current state of research reveals a dual movement: on the one hand, there is an intensive integration of digital technologies into heritage practices; on the other, there is a lack of a theoretical framework that would make these practices part of cultural memory and re-creation strategies.</p>
+          <p>Added to this is the Ukrainian paradox: at the level of laws and official declarations, heritage is ostensibly protected, but in practice, it is systematically destroyed—often by the very hands formally tasked with its “preservation.” In such a context, we cannot halt the destruction, but we can create something stronger than today’s helplessness: a digital reservoir of memory that can serve as a foundation for delayed re-creation in the future.</p>
+          <p>Our project seeks to fill this gap by combining 3D scanning of Chuhuiv with the development of a model of delayed re-creation as a sustainable strategy for safeguarding the identity of small historic towns. Art Oborona</p>
+        </template>
+      </section>
+      <section class="concept-slide" id="concept" aria-labelledby="concept-title">
+        <header class="concept-intro">
+          <div class="concept-identity"><span>03</span><h2 id="concept-title">CONCEPT</h2></div>
+          <p class="concept-statement">DELAYED<br>RE-CREATION</p>
+          <p class="concept-description">A new form of cultural heritage preservation for situations where physical restoration is currently impossible.</p>
+        </header>
+        <div class="concept-structure">
+          <ol class="concept-principles">
+            <li>
+              <span class="concept-index">01</span>
+              <div><h3>DELAYED RE-CREATION</h3><p>Develop and substantiate the concept as a new strategy for the sustainable preservation of cultural heritage under conditions of radical loss.</p></div>
+            </li>
+            <li>
+              <span class="concept-index">02</span>
+              <div><h3>DIGITAL AUTHENTICITY</h3><p>Define its role in ensuring the continuity of cultural memory.</p></div>
+            </li>
+            <li>
+              <span class="concept-index">03</span>
+              <div><h3>DIGITAL DOCUMENTATION</h3><p>Carry out 3D scanning and build a digital model of a selected architectural heritage site in Chuhuiv.</p><p class="concept-tools">3D SCANNING · PHOTOGRAMMETRY · GIS</p></div>
+            </li>
+            <li>
+              <span class="concept-index">04</span>
+              <div><h3>METHODOLOGY</h3><p>Elaborate methodological principles of digital re-creation that integrate technical data with cultural logic and authenticity.</p></div>
+            </li>
+            <li>
+              <span class="concept-index">05</span>
+              <div><h3>VALIDATION AND OUTREACH</h3><p>Test the concept in the public domain (seminar, academic publications, the “Chuhuiv Declaration of Delayed Re-creation”) and establish it within academic and museum communities.</p></div>
+            </li>
+          </ol>
+          <p class="concept-closing"><span class="concept-direction" aria-hidden="true"></span><span>FROM DOCUMENTATION<br>TO A RESOURCE<br>FOR FUTURE RE-CREATION</span></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
