@@ -92,3 +92,78 @@ readingText.addEventListener("scroll", updateReadingScroll, { passive: true });
 window.addEventListener("resize", updateReadingScroll);
 new ResizeObserver(updateReadingScroll).observe(readingText);
 
+// One shared next-section control for PROJECT through RESULTS; TEAM has none.
+const nextSections = {
+  project: "background",
+  background: "concept",
+  concept: "research",
+  research: "results",
+  results: "team",
+};
+Object.entries(nextSections).forEach(([sectionId, nextId]) => {
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+  const target = document.getElementById(nextId);
+  const control = document.createElement("button");
+  control.type = "button";
+  control.className = "section-scroll";
+  control.disabled = !target;
+  control.setAttribute("aria-label", target
+    ? "Scroll to " + nextId.toUpperCase()
+    : nextId.toUpperCase() + " section is not yet available");
+  const label = document.createElement("span");
+  label.className = "section-scroll-label";
+  label.textContent = "SCROLL";
+  const circle = document.createElement("span");
+  circle.className = "section-scroll-circle";
+  circle.setAttribute("aria-hidden", "true");
+  circle.textContent = "↓";
+  control.append(label, circle);
+  control.addEventListener("click", () => {
+    if (!target) return;
+    target.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+      block: "start",
+    });
+  });
+  section.append(control);
+});
+
+// Fit the complete text into a fixed rectangle without resizing the box or columns.
+const sectionHeadlines = [...document.querySelectorAll(".section-headline")];
+function fitSectionHeadline(box) {
+  const text = box.querySelector(".section-headline-text");
+  const bounds = box.getBoundingClientRect();
+  if (!text || !bounds.width || !bounds.height) return;
+  // The outer box retains the approved responsive maximum font size.
+  const maximumSize = parseFloat(getComputedStyle(box).fontSize);
+  const fits = (size) => {
+    text.style.fontSize = size + "px";
+    const measured = text.getBoundingClientRect();
+    return measured.width <= bounds.width && measured.height <= bounds.height;
+  };
+  if (fits(maximumSize)) return;
+  let low = 0;
+  let high = maximumSize;
+  for (let step = 0; step < 18; step++) {
+    const middle = (low + high) / 2;
+    if (fits(middle)) low = middle;
+    else high = middle;
+  }
+  text.style.fontSize = low + "px";
+}
+let headlineFitFrame = 0;
+function scheduleHeadlineFit() {
+  cancelAnimationFrame(headlineFitFrame);
+  headlineFitFrame = requestAnimationFrame(() => sectionHeadlines.forEach(fitSectionHeadline));
+}
+window.addEventListener("resize", scheduleHeadlineFit);
+const headlineResizeObserver = new ResizeObserver(scheduleHeadlineFit);
+sectionHeadlines.forEach((box) => headlineResizeObserver.observe(box));
+const headlineTextObserver = new MutationObserver(scheduleHeadlineFit);
+sectionHeadlines.forEach((box) => headlineTextObserver.observe(box, {
+  childList: true, characterData: true, subtree: true,
+}));
+document.fonts.ready.then(scheduleHeadlineFit);
+document.fonts.addEventListener("loadingdone", scheduleHeadlineFit);
+scheduleHeadlineFit();

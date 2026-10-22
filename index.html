@@ -17,9 +17,9 @@
             <li><a href="#project" aria-current="page"><span class="section-number">01</span> PROJECT</a></li>
             <li><a href="#background"><span class="section-number">02</span> BACKGROUND</a></li>
             <li><a href="#concept"><span class="section-number">03</span> CONCEPT</a></li>
-            <li><a href="#research" aria-disabled="true" tabindex="-1"><span class="section-number">04</span> RESEARCH</a></li>
-            <li><a href="#results" aria-disabled="true" tabindex="-1"><span class="section-number">05</span> RESULTS</a></li>
-            <li><a href="#team" aria-disabled="true" tabindex="-1"><span class="section-number">06</span> TEAM</a></li>
+            <li><a href="#research"><span class="section-number">04</span> RESEARCH</a></li>
+            <li><a href="#results"><span class="section-number">05</span> RESULTS</a></li>
+            <li><a href="#team"><span class="section-number">06</span> TEAM</a></li>
           </ol>
         </nav>
 
@@ -35,23 +35,29 @@
         <div class="project-copy">
           <h1 id="project-title">
             <span>3D SCANNING</span>
+          </h1>
+          <h2 class="project-secondary-title">
             <span>OF CHUHUIV'S</span>
             <span>ARCHITECTURAL</span>
             <span>HERITAGE</span>
-          </h1>
+          </h2>
           <p class="project-description">DIGITAL DOCUMENTATION FOR<br>PRESERVATION AND RECONSTRUCTION</p>
           <p class="project-date">2025 — 2026 / CHUHUIV, UKRAINE</p>
         </div>
 
         <footer class="slide-footer">
-          <!-- Reserved space for three partner logos; no invented branding. -->
+          <!-- Genuine logo marks can be inserted beside the text without moving this row. -->
           <div class="partner-logos">
-            <div class="partner-logo" data-partner="1"></div>
-            <div class="partner-logo" data-partner="2"></div>
-            <div class="partner-logo" data-partner="3"></div>
+            <div class="partner-logo" data-partner="dbu">
+              <div class="partner-wording"><span class="partner-funding">Funded by</span><span>Deutsche Bundesstiftung Umwelt</span><span class="partner-dbu">DBU</span></div>
+            </div>
+            <div class="partner-logo" data-partner="i-repin-art-museum-chuhuiv">
+              <div class="partner-wording"><span>I. REPIN</span><span>ART MUSEUM</span><span class="partner-secondary">CHUHUIV</span></div>
+            </div>
+            <div class="partner-logo" data-partner="art-oborona">
+              <div class="partner-wording partner-art">ART OBORONA</div>
+            </div>
           </div>
-          <!-- Visual cue only until additional slides exist. -->
-          <div class="scroll-cue"><span>SCROLL</span><span class="scroll-arrow" aria-hidden="true"></span></div>
         </footer>
       </section>
 
@@ -59,19 +65,23 @@
         <!-- Reserved for the supplied Chuhuiv map; no substitute geography. -->
         <div class="background-map" aria-hidden="true"></div>
         <header class="background-identity">
-          <span class="background-number">02</span>
-          <h2 id="background-title">BACKGROUND</h2>
-          <p>CONTEXT, CHALLENGES<br>AND RESEARCH QUESTIONS</p>
+          <div class="background-section-label section-identity">
+            <span class="background-number">02</span>
+            <h2 id="background-title">BACKGROUND</h2>
+          </div>
+          <h3 class="background-statement section-headline"><span class="section-headline-text">HERITAGE<br>AT RISK</span></h3>
+          <p class="section-description">Context, challenges and research questions</p>
         </header>
+        <div class="background-composition">
         <div class="background-panel">
           <div class="background-overview" id="background-overview">
             <ol class="background-questions">
-              <li><button type="button" data-topic="0" aria-controls="background-reader"><span class="topic-number">01</span><span>WHY DOES CHUHUIV NEED A NEW PRESERVATION STRATEGY?</span></button></li>
-              <li><button type="button" data-topic="1" aria-controls="background-reader"><span class="topic-number">02</span><span>CAN RE-CREATION BECOME A FORM OF PRESERVATION?</span></button></li>
-              <li><button type="button" data-topic="2" aria-controls="background-reader"><span class="topic-number">03</span><span>HOW CAN DIGITAL DOCUMENTATION PRESERVE THE FUTURE?</span></button></li>
-              <li><button type="button" data-topic="3" aria-controls="background-reader"><span class="topic-number">04</span><span>INTERNATIONAL HERITAGE CONSERVATION FRAMEWORKS</span></button></li>
-              <li><button type="button" data-topic="4" aria-controls="background-reader"><span class="topic-number">05</span><span>THE UKRAINIAN CONTEXT OF RE-CREATION</span></button></li>
-              <li><button type="button" data-topic="5" aria-controls="background-reader"><span class="topic-number">06</span><span>DIGITAL DOCUMENTATION AND THE RESEARCH GAP</span></button></li>
+              <li><button type="button" data-topic="0" aria-controls="background-reader"><span>WHY DOES CHUHUIV NEED A NEW PRESERVATION STRATEGY?</span></button></li>
+              <li><button type="button" data-topic="1" aria-controls="background-reader"><span>CAN RE-CREATION BECOME A FORM OF PRESERVATION?</span></button></li>
+              <li><button type="button" data-topic="2" aria-controls="background-reader"><span>HOW CAN DIGITAL DOCUMENTATION PRESERVE THE FUTURE?</span></button></li>
+              <li><button type="button" data-topic="3" aria-controls="background-reader"><span>INTERNATIONAL HERITAGE CONSERVATION FRAMEWORKS</span></button></li>
+              <li><button type="button" data-topic="4" aria-controls="background-reader"><span>THE UKRAINIAN CONTEXT OF RE-CREATION</span></button></li>
+              <li><button type="button" data-topic="5" aria-controls="background-reader"><span>DIGITAL DOCUMENTATION AND THE RESEARCH GAP</span></button></li>
             </ol>
           </div>
           <article class="background-reader" id="background-reader" aria-labelledby="reading-title" hidden>
@@ -99,6 +109,7 @@
             <li><button type="button" data-topic="5" aria-label="06 DIGITAL DOCUMENTATION AND THE RESEARCH GAP" aria-controls="background-reader"></button></li>
           </ol>
         </nav>
+        </div>
         <!-- Insert the original source paragraphs into these templates when supplied. -->
         <template id="background-content-0" data-title="Why does Chuhuiv need a new preservation strategy?">
           <p>Cultural heritage in Ukraine is facing an unprecedented threat. The war has only intensified processes that had been unfolding for decades: systematic neglect of historic environments, uncontrolled development, and destruction driven by short-term gain. For years, we ourselves have been erasing what previous generations had created, and now, compounded by the consequences of war, this process has taken on an irreversible character.</p>
@@ -142,35 +153,122 @@
       </section>
       <section class="concept-slide" id="concept" aria-labelledby="concept-title">
         <header class="concept-intro">
-          <div class="concept-identity"><span>03</span><h2 id="concept-title">CONCEPT</h2></div>
-          <p class="concept-statement">DELAYED<br>RE-CREATION</p>
-          <p class="concept-description">A new form of cultural heritage preservation for situations where physical restoration is currently impossible.</p>
+          <div class="concept-identity section-identity"><span>03</span><h2 id="concept-title">CONCEPT</h2></div>
+          <div class="concept-heading-slot">
+            <p class="concept-statement section-headline"><span class="section-headline-text">DELAYED<br>RE-CREATION</span></p>
+          </div>
+          <p class="concept-description section-description"><span>A new form of cultural heritage preservation for situations where</span> <span>physical restoration is currently impossible.</span></p>
         </header>
         <div class="concept-structure">
           <ol class="concept-principles">
             <li>
-              <span class="concept-index">01</span>
               <div><h3>DELAYED RE-CREATION</h3><p>Develop and substantiate the concept as a new strategy for the sustainable preservation of cultural heritage under conditions of radical loss.</p></div>
             </li>
             <li>
-              <span class="concept-index">02</span>
               <div><h3>DIGITAL AUTHENTICITY</h3><p>Define its role in ensuring the continuity of cultural memory.</p></div>
             </li>
             <li>
-              <span class="concept-index">03</span>
               <div><h3>DIGITAL DOCUMENTATION</h3><p>Carry out 3D scanning and build a digital model of a selected architectural heritage site in Chuhuiv.</p><p class="concept-tools">3D SCANNING · PHOTOGRAMMETRY · GIS</p></div>
             </li>
             <li>
-              <span class="concept-index">04</span>
               <div><h3>METHODOLOGY</h3><p>Elaborate methodological principles of digital re-creation that integrate technical data with cultural logic and authenticity.</p></div>
             </li>
             <li>
-              <span class="concept-index">05</span>
               <div><h3>VALIDATION AND OUTREACH</h3><p>Test the concept in the public domain (seminar, academic publications, the “Chuhuiv Declaration of Delayed Re-creation”) and establish it within academic and museum communities.</p></div>
             </li>
           </ol>
           <p class="concept-closing"><span class="concept-direction" aria-hidden="true"></span><span>FROM DOCUMENTATION<br>TO A RESOURCE<br>FOR FUTURE RE-CREATION</span></p>
         </div>
+      </section>
+      <section class="background-slide research-slide" id="research" aria-labelledby="research-title">
+        <header class="background-identity research-intro">
+          <div class="background-section-label section-identity">
+            <span class="background-number">04</span>
+            <h2 id="research-title">RESEARCH</h2>
+          </div>
+          <h3 class="background-statement section-headline"><span class="section-headline-text">FROM THEORY<br>TO VALIDATION</span></h3>
+          <p class="section-description">An integrated research framework combining theoretical analysis, digital documentation and validation.</p>
+        </header>
+      </section>
+      <section class="background-slide results-slide" id="results" aria-labelledby="results-title">
+        <header class="background-identity results-intro">
+          <div class="background-section-label section-identity">
+            <span class="background-number">05</span>
+            <h2 id="results-title">RESULTS</h2>
+          </div>
+          <h3 class="background-statement section-headline"><span class="section-headline-text">FOR THE<br>FUTURE</span></h3>
+          <p class="section-description">Digital documentation, research outputs and resources for future re-creation.</p>
+        </header>
+        <div class="results-content">
+          <article class="result-primary" aria-labelledby="documentation-title">
+            <header class="result-heading">
+              <div>
+                <h3 id="documentation-title">DIGITAL DOCUMENTATION</h3>
+                <p>Point cloud · 3D model · Orthophotos</p>
+              </div>
+              <button class="result-access" type="button" disabled aria-label="Digital documentation — not yet available">→</button>
+            </header>
+            <div class="result-preview" role="img" aria-label="Placeholder for a future point-cloud or 3D-model preview; no project model is displayed yet.">
+              <span class="result-preview-label">3D / POINT CLOUD</span>
+              <span class="result-preview-status">PREVIEW TO FOLLOW</span>
+            </div>
+          </article>
+          <div class="results-secondary">
+            <article aria-labelledby="outputs-title">
+              <header class="result-heading">
+                <h3 id="outputs-title">RESEARCH OUTPUTS</h3>
+                <button class="result-access" type="button" disabled aria-label="Research outputs — not yet available">→</button>
+              </header>
+              <p>Delayed re-creation · Digital authenticity · Methodological framework</p>
+            </article>
+            <article aria-labelledby="declaration-title">
+              <header class="result-heading">
+                <h3 id="declaration-title">CHUHUIV DECLARATION</h3>
+                <button class="result-access" type="button" disabled aria-label="Chuhuiv Declaration — not yet available">→</button>
+              </header>
+              <p>Chuhuiv Declaration of Delayed Re-creation</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="background-slide team-slide" id="team" aria-labelledby="team-title">
+        <header class="background-identity team-intro">
+          <div class="background-section-label section-identity">
+            <span class="background-number">06</span>
+            <h2 id="team-title">TEAM</h2>
+          </div>
+          <h3 class="background-statement section-headline"><span class="section-headline-text">BEHIND<br>THE WORK</span></h3>
+          <p class="section-description">Researchers, heritage professionals and project partners.</p>
+        </header>
+        <div class="team-content">
+          <ul class="team-members" aria-label="Team member placeholders">
+            <li><h3>NAME SURNAME</h3><p>Project role</p></li>
+            <li><h3>NAME SURNAME</h3><p>Project role</p></li>
+            <li><h3>NAME SURNAME</h3><p>Project role</p></li>
+            <li><h3>NAME SURNAME</h3><p>Project role</p></li>
+          </ul>
+          <section class="team-partners" aria-labelledby="partners-title">
+            <h3 id="partners-title">PROJECT PARTNERS</h3>
+            <ul class="team-partner-slots">
+              <li>
+                <div class="team-logo-placeholder" aria-label="Reserved for the DBU logo">LOGO</div>
+                <p>Deutsche Bundesstiftung Umwelt (DBU)</p>
+              </li>
+              <li>
+                <div class="team-logo-placeholder" aria-label="Reserved for the I. Repin Art Museum logo">LOGO</div>
+                <p>I. Repin Art Museum, Chuhuiv</p>
+              </li>
+              <li>
+                <div class="team-logo-placeholder" aria-label="Reserved for the Art Oborona logo">LOGO</div>
+                <p>Art Oborona</p>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <footer class="team-footer">
+          <span>CHUHUIV · UKRAINE · 2025—2026</span>
+          <a href="#project">BACK TO TOP ↑</a>
+        </footer>
       </section>
     </main>
   </body>
