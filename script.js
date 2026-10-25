@@ -2,6 +2,14 @@
 
 const globalLinks = [...document.querySelectorAll(".section-menu a")];
 const sections = [...document.querySelectorAll("main > section")];
+const navActiveLine = document.querySelector(".nav-active-line");
+function alignNavigationMarker() {
+  const activeLink = globalLinks.find((link) => link.hasAttribute("aria-current"));
+  if (!activeLink) return;
+  const bounds = activeLink.getBoundingClientRect();
+  navActiveLine.style.transform = `translateY(${bounds.top + bounds.height / 2 - 0.5}px)`;
+  navActiveLine.style.visibility = "visible";
+}
 globalLinks.forEach((link) => {
   if (link.getAttribute("aria-disabled") === "true") {
     link.addEventListener("click", (event) => event.preventDefault());
@@ -18,11 +26,14 @@ function updateGlobalNavigation() {
     if (link.hash === "#" + current.id) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });
+  alignNavigationMarker();
 }
 window.addEventListener("scroll", updateGlobalNavigation, { passive: true });
 window.addEventListener("resize", updateGlobalNavigation);
 window.addEventListener("pageshow", updateGlobalNavigation);
 updateGlobalNavigation();
+new ResizeObserver(alignNavigationMarker).observe(document.querySelector(".section-menu"));
+document.fonts.ready.then(alignNavigationMarker);
 
 const overview = document.getElementById("background-overview");
 const reader = document.getElementById("background-reader");

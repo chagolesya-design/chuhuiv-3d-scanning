@@ -8,10 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261025-gallery-cover1">
+    <link rel="stylesheet" href="gallery.css?v=20261025-photos1">
+    <link rel="stylesheet" href="pdf-viewer.css?v=20261025-reading1">
     <script src="script.js" defer></script>
+    <script src="gallery.js?v=20261025-photos2" defer></script>
+    <script src="results.js?v=20261025-reading1" defer></script>
   </head>
   <body>
+    <div class="nav-axis" aria-hidden="true"></div>
+    <div class="nav-active-line" aria-hidden="true"></div>
         <nav class="section-menu" aria-label="Main navigation">
           <ol>
             <li><a href="#project" aria-current="page"><span class="section-number">01</span> PROJECT</a></li>
@@ -46,22 +52,29 @@
         </div>
 
         <footer class="slide-footer">
-          <!-- Genuine logo marks can be inserted beside the text without moving this row. -->
           <div class="partner-logos">
-            <div class="partner-logo" data-partner="dbu">
-              <div class="partner-wording"><span class="partner-funding">Funded by</span><span>Deutsche Bundesstiftung Umwelt</span><span class="partner-dbu">DBU</span></div>
-            </div>
-            <div class="partner-logo" data-partner="i-repin-art-museum-chuhuiv">
-              <div class="partner-wording"><span>I. REPIN</span><span>ART MUSEUM</span><span class="partner-secondary">CHUHUIV</span></div>
-            </div>
-            <div class="partner-logo" data-partner="art-oborona">
-              <div class="partner-wording partner-art">ART OBORONA</div>
-            </div>
+            <a class="partner-logo" data-partner="dbu" href="https://www.dbu.de/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Deutsche Bundesstiftung Umwelt — official website">
+              <div class="partner-logo-slot" aria-hidden="true">
+                <img src="assets/dbu-logo.png" alt="">
+              </div>
+              <div class="partner-wording"><span>Deutsche Bundesstiftung</span><br><span>Umwelt</span></div>
+            </a>
+            <a class="partner-logo" data-partner="i-repin-art-museum-chuhuiv" href="https://repin.in.ua/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Repin Museum — official website">
+              <div class="partner-logo-slot" aria-hidden="true"><img src="assets/Repin_Museum_logo.png" alt=""></div>
+              <div class="partner-wording">REPIN MUSEUM</div>
+            </a>
+            <a class="partner-logo" data-partner="art-oborona" href="https://art-oborona.weblium.site/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Art Oborona — official website">
+              <div class="partner-logo-slot" aria-hidden="true"><img src="assets/art-oborona_logo.png" alt=""></div>
+              <div class="partner-wording">ART OBORONA</div>
+            </a>
           </div>
         </footer>
       </section>
 
       <section class="background-slide" id="background" aria-labelledby="background-title">
+        <div class="background-heritage-photo" aria-hidden="true">
+          <img src="assets/02_BACK_01.webp" alt="">
+        </div>
         <!-- Reserved for the supplied Chuhuiv map; no substitute geography. -->
         <div class="background-map" aria-hidden="true"></div>
         <header class="background-identity">
@@ -152,6 +165,7 @@
         </template>
       </section>
       <section class="concept-slide" id="concept" aria-labelledby="concept-title">
+        <img class="concept-documentation-image" src="assets/delayed-recreation-digital-documentation.webp" alt="Digital documentation of architectural heritage for delayed re-creation">
         <header class="concept-intro">
           <div class="concept-identity section-identity"><span>03</span><h2 id="concept-title">CONCEPT</h2></div>
           <div class="concept-heading-slot">
@@ -162,22 +176,21 @@
         <div class="concept-structure">
           <ol class="concept-principles">
             <li>
-              <div><h3>DELAYED RE-CREATION</h3><p>Develop and substantiate the concept as a new strategy for the sustainable preservation of cultural heritage under conditions of radical loss.</p></div>
+              <div><h3>DELAYED RE-CREATION</h3><p>Physical re-creation is postponed, while the possibility of returning lost heritage in the future is preserved.</p></div>
             </li>
             <li>
-              <div><h3>DIGITAL AUTHENTICITY</h3><p>Define its role in ensuring the continuity of cultural memory.</p></div>
+              <div><h3>DIGITAL AUTHENTICITY</h3><p>Digital records preserve verifiable characteristics of an authentic object and provide a reliable basis for future decisions.</p></div>
             </li>
             <li>
-              <div><h3>DIGITAL DOCUMENTATION</h3><p>Carry out 3D scanning and build a digital model of a selected architectural heritage site in Chuhuiv.</p><p class="concept-tools">3D SCANNING · PHOTOGRAMMETRY · GIS</p></div>
+              <div><h3>DIGITAL DOCUMENTATION</h3><p>Digital documentation preserves information about geometry, spatial structure, condition and context when physical heritage is at risk of loss.</p></div>
             </li>
             <li>
-              <div><h3>METHODOLOGY</h3><p>Elaborate methodological principles of digital re-creation that integrate technical data with cultural logic and authenticity.</p></div>
+              <div><h3>METHODOLOGY</h3><p>Material, conceptual, contextual and functional dimensions of heritage are considered together when assessing the possibilities and limits of re-creation.</p></div>
             </li>
             <li>
-              <div><h3>VALIDATION AND OUTREACH</h3><p>Test the concept in the public domain (seminar, academic publications, the “Chuhuiv Declaration of Delayed Re-creation”) and establish it within academic and museum communities.</p></div>
+              <div><h3>FUTURE POSSIBILITY</h3><p>Delayed re-creation does not predetermine physical reconstruction. It preserves the possibility of making an informed decision in the future.</p></div>
             </li>
           </ol>
-          <p class="concept-closing"><span class="concept-direction" aria-hidden="true"></span><span>FROM DOCUMENTATION<br>TO A RESOURCE<br>FOR FUTURE RE-CREATION</span></p>
         </div>
       </section>
       <section class="background-slide research-slide" id="research" aria-labelledby="research-title">
@@ -186,7 +199,7 @@
             <span class="background-number">04</span>
             <h2 id="research-title">RESEARCH</h2>
           </div>
-          <h3 class="background-statement section-headline"><span class="section-headline-text">FROM THEORY<br>TO VALIDATION</span></h3>
+          <h3 class="background-statement section-headline"><span class="section-headline-text">METHODS</span></h3>
           <p class="section-description">An integrated research framework combining theoretical analysis, digital documentation and validation.</p>
         </header>
       </section>
@@ -199,36 +212,25 @@
           <h3 class="background-statement section-headline"><span class="section-headline-text">FOR THE<br>FUTURE</span></h3>
           <p class="section-description">Digital documentation, research outputs and resources for future re-creation.</p>
         </header>
-        <div class="results-content">
-          <article class="result-primary" aria-labelledby="documentation-title">
+        <div class="results-content" role="region" aria-roledescription="carousel" aria-label="Project results">
+          <article class="result-primary" aria-labelledby="result-title">
             <header class="result-heading">
-              <div>
-                <h3 id="documentation-title">DIGITAL DOCUMENTATION</h3>
-                <p>Point cloud · 3D model · Orthophotos</p>
+              <div class="result-summary" aria-live="polite" aria-atomic="true">
+                <h3 id="result-title">DIGITAL DOCUMENTATION</h3>
+                <p id="result-description">Point cloud · 3D model · Orthophotos</p>
               </div>
-              <button class="result-access" type="button" disabled aria-label="Digital documentation — not yet available">→</button>
+              <nav class="result-navigation" aria-label="Browse project results">
+                <button class="result-access" type="button" data-result-step="-1" aria-label="Previous result">←</button>
+                <span class="result-counter" aria-label="Result 1 of 4">01 / 04</span>
+                <button class="result-access" type="button" data-result-step="1" aria-label="Next result">→</button>
+              </nav>
             </header>
-            <div class="result-preview" role="img" aria-label="Placeholder for a future point-cloud or 3D-model preview; no project model is displayed yet.">
+            <div class="result-preview" role="group" aria-roledescription="slide" aria-label="1 of 4 — DIGITAL DOCUMENTATION" tabindex="0">
               <span class="result-preview-label">3D / POINT CLOUD</span>
               <span class="result-preview-status">PREVIEW TO FOLLOW</span>
             </div>
           </article>
-          <div class="results-secondary">
-            <article aria-labelledby="outputs-title">
-              <header class="result-heading">
-                <h3 id="outputs-title">RESEARCH OUTPUTS</h3>
-                <button class="result-access" type="button" disabled aria-label="Research outputs — not yet available">→</button>
-              </header>
-              <p>Delayed re-creation · Digital authenticity · Methodological framework</p>
-            </article>
-            <article aria-labelledby="declaration-title">
-              <header class="result-heading">
-                <h3 id="declaration-title">CHUHUIV DECLARATION</h3>
-                <button class="result-access" type="button" disabled aria-label="Chuhuiv Declaration — not yet available">→</button>
-              </header>
-              <p>Chuhuiv Declaration of Delayed Re-creation</p>
-            </article>
-          </div>
+          <div class="results-secondary" aria-label="Upcoming results"></div>
         </div>
       </section>
       <section class="background-slide team-slide" id="team" aria-labelledby="team-title">
@@ -241,32 +243,60 @@
           <p class="section-description">Researchers, heritage professionals and project partners.</p>
         </header>
         <div class="team-content">
-          <ul class="team-members" aria-label="Team member placeholders">
-            <li><h3>NAME SURNAME</h3><p>Project role</p></li>
-            <li><h3>NAME SURNAME</h3><p>Project role</p></li>
-            <li><h3>NAME SURNAME</h3><p>Project role</p></li>
-            <li><h3>NAME SURNAME</h3><p>Project role</p></li>
+          <ul class="team-members" aria-label="Team members">
+            <li>
+              <a class="team-member-profile" href="https://art-oborona.weblium.site/members-page/chagovets-olesia-en" target="_blank" rel="noopener noreferrer">
+                <img src="assets/Chagovets_photo.png" alt="Portrait of Olesia Chagovets">
+                <div><h3>Olesia<br>Chagovets</h3><p>Architect</p></div>
+              </a>
+            </li>
+            <li>
+              <div class="team-member-profile">
+                <div class="team-photo-placeholder" aria-hidden="true"></div>
+                <div><h3>Svitlana<br>Buchasta</h3><p>Curator</p></div>
+              </div>
+            </li>
+            <li>
+              <div class="team-member-profile">
+                <div class="team-photo-placeholder" aria-hidden="true"></div>
+                <div><h3>Olha<br>Shevchenko</h3><p>Curator</p></div>
+              </div>
+            </li>
+            <li>
+              <a class="team-member-profile" href="https://art-oborona.weblium.site/members-page/anastasiia-bozhenko-en?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">
+                <div class="team-member-photo"><img src="assets/Bozhenko_photo.png" alt="Portrait of Anastasiia Bozhenko"></div>
+                <div><h3>Anastasiia<br>Bozhenko</h3><p>Communications<br>Manager</p></div>
+              </a>
+            </li>
           </ul>
           <section class="team-partners" aria-labelledby="partners-title">
             <h3 id="partners-title">PROJECT PARTNERS</h3>
             <ul class="team-partner-slots">
               <li>
-                <div class="team-logo-placeholder" aria-label="Reserved for the DBU logo">LOGO</div>
-                <p>Deutsche Bundesstiftung Umwelt (DBU)</p>
+                <a class="team-partner-link" href="https://www.dbu.de/" target="_blank" rel="noopener noreferrer nofollow">
+                  <div class="team-partner-logo"><img src="assets/dbu-logo.png" alt=""></div>
+                  <p><span>Deutsche Bundesstiftung</span><br>Umwelt</p>
+                </a>
               </li>
               <li>
-                <div class="team-logo-placeholder" aria-label="Reserved for the I. Repin Art Museum logo">LOGO</div>
-                <p>I. Repin Art Museum, Chuhuiv</p>
+                <a class="team-partner-link" href="https://repin.in.ua/" target="_blank" rel="noopener noreferrer nofollow">
+                  <div class="team-partner-logo"><img src="assets/Repin_Museum_logo.png" alt=""></div>
+                  <p>REPIN MUSEUM</p>
+                </a>
               </li>
               <li>
-                <div class="team-logo-placeholder" aria-label="Reserved for the Art Oborona logo">LOGO</div>
-                <p>Art Oborona</p>
+                <a class="team-partner-link" href="https://art-oborona.weblium.site/" target="_blank" rel="noopener noreferrer nofollow">
+                  <div class="team-partner-logo"><img src="assets/art-oborona_logo.png" alt=""></div>
+                  <p>ART OBORONA</p>
+                </a>
               </li>
             </ul>
           </section>
         </div>
         <footer class="team-footer">
-          <span>CHUHUIV · UKRAINE · 2025—2026</span>
+          <div class="team-footer-info">
+            <span class="team-copyright">© 2026 I. REPIN ART MUSEUM, CHUHUIV · ART OBORONA</span>
+          </div>
           <a href="#project">BACK TO TOP ↑</a>
         </footer>
       </section>

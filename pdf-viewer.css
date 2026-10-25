@@ -1,0 +1,19 @@
+/* PDF shares the gallery shell, header, controls and thumbnail styling. */
+.pdf-viewer-stage { position: relative; min-width: 0; min-height: 0; display: flex; overflow: auto; touch-action: none; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #48443f transparent; }
+.pdf-viewer-pages { display: flex; flex: none; margin: auto; align-items: center; gap: 16px; }
+.pdf-zoom { display: flex; align-items: center; gap: 2px; }
+.pdf-zoom-value { min-width: 42px; text-align: center; font-size: 11px; font-variant-numeric: tabular-nums; }
+.pdf-zoom [data-zoom="fit"] { font-size: 10px; letter-spacing: .1em; }
+.pdf-viewer .gallery-details { flex-wrap: wrap; gap: 4px 12px; }
+.pdf-viewer-pages canvas { display: block; flex: none; border: 0; }
+.pdf-viewer-message { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 24px; text-align: center; font-size: 13px; }
+.pdf-viewer-message[hidden] { display: none; }
+.pdf-viewer button:disabled { opacity: .25; cursor: default; }
+.pdf-viewer-download { color: var(--color-accent-warm); font-size: 10px; letter-spacing: .1em; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.pdf-viewer-download:focus-visible { outline: 1px solid var(--color-accent-warm); }
+.pdf-thumbnails button { display: flex; align-items: center; justify-content: center; }
+.pdf-thumbnails canvas { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; }
+@media (max-width: 600px) {
+  .pdf-viewer .gallery-details { flex-direction: row; gap: 4px; }
+  .pdf-viewer .gallery-navigation { gap: 0; }
+}
